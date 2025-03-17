@@ -36,6 +36,26 @@ const MainDetail = (props) => {
   //     </button>
   //   </>
   // );
+  const { number, setNumber, sumNumber, miNumber } = props;
+  return (
+    <div className="red">
+      <button
+        onClick={() => {
+          sumNumber();
+        }}
+      >
+        +
+      </button>
+      <div>{number}</div>
+      <button
+        onClick={() => {
+          miNumber();
+        }}
+      >
+        -
+      </button>
+    </div>
+  );
 };
 
 export default MainDetail;

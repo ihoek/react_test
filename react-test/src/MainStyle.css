@@ -8,4 +8,31 @@
   .content {
     color: gray;
   }
+  .red {
+    display: flex;
+    gap: 20px;
+    background-color: red;
+  }
+  .orange {
+    display: flex;
+    gap: 50px;
+    background-color: orange;
+  }
+  .yello {
+    display: flex;
+    gap: 50px;
+    background-color: yellow;
+  }
+  .green {
+    background-color: green;
+  }
+  .blue {
+    background-color: blue;
+  }
+  .dark {
+    background-color: darkblue;
+  }
+  .purple {
+    background-color: purple;
+  }
 }
