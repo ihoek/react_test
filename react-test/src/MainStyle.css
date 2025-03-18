@@ -36,3 +36,29 @@
     background-color: purple;
   }
 }
+
+.mainright {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 10px;
+
+  .number {
+    display: flex;
+    align-items: center;
+  }
+  .number_btn {
+    border: none;
+  }
+  .select {
+    gap: 5px;
+    width: 100%;
+    display: flex;
+  }
+  .packaging {
+    width: 200px;
+  }
+}

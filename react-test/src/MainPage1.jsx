@@ -7,8 +7,28 @@ import MainDetailGreen from "./MainDetailGreen";
 import MainDetailBlue from "./MainDetailBlue";
 import MainDetailDark from "./MainDetailDark";
 import MainDetailPurple from "./MainDetailPurple";
+import Calculator from "./Calculator";
+import { Button, Select, Space, Input } from "antd";
+import apple from "./img/apple.jpeg";
+import banana from "./img/banana.jpeg";
+import grape from "./img/grape.jpeg";
+import Mainfurit from "./Mainfurit";
+import MainBack from "./MainBack";
+import MainColor from "./MainColor";
+import MainText from "./MainText";
+import MainImg from "./MainImg";
+import MainResult from "./MainResult";
 
 const MainPage1 = () => {
+  //과일 value 넣을 변수
+  const [fruit, setFruit] = useState(apple);
+  //배경색
+  const [back, setBack] = useState("red");
+  //글자색
+  const [fontColor, setFontColor] = useState("white");
+  //input 저장용 - text
+  const [text, setText] = useState("");
+
   //const main1 = "main 01";
   // const sample = [
   //   { title: "제목 제목1", content: "세상에나1" },
@@ -104,10 +124,37 @@ const MainPage1 = () => {
     return value;
   };
 
+  //실시간 input 값 받기
+  const [idValue, setidValue] = useState("");
+
+  const saveUserId = (event) => {
+    setidValue(event.target.value);
+  };
+
+  //calculator 연습
+  const [first, setFirst] = useState();
+  const [second, setSecond] = useState();
+  const [result, setResult] = useState();
+
+  const plusinput = () => {
+    //Number(first) + Number(second)
+    setResult(setFirst);
+  };
+
   return (
     <div className="wrap-box">
-      {/* {changevalue("he")} */}
-      <MainDetail
+      <Mainfurit fruit={fruit} setFruit={setFruit} />
+      <MainBack back={back} setBack={setBack} />
+      <MainColor fontColor={fontColor} setFontColor={setFontColor} />
+      <MainText text={text} setText={setText} />
+      <br />
+      <MainImg fruit={fruit} />
+      <MainResult text={text} back={back} fontColor={fontColor} />
+
+      {/* <Button type="primary" ghost>
+        Primary
+      </Button> */}
+      {/* <MainDetail
         number={number}
         setNumber={setNumber}
         sumNumber={sumNumber}
@@ -118,7 +165,16 @@ const MainPage1 = () => {
       <MainDetailGreen />
       <MainDetailBlue />
       <MainDetailDark />
-      <MainDetailPurple />
+      <MainDetailPurple idValue={idValue} saveUserId={saveUserId} />
+      <h1>input 연습</h1>
+      <Calculator
+        result={result}
+        plusinput={plusinput}
+        first={first}
+        second={second}
+        setFirst={setFirst}
+        setSecond={setSecond}
+      /> */}
     </div>
   );
 };

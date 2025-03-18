@@ -7,7 +7,7 @@ import "./MainStyle.css";
  * props = {title : string, content : string}
  */
 const MainDetail = (props) => {
-  console.log("props : ", props);
+  //console.log("props : ", props);
   //const { number, sumNumber, miNumber } = props;
 
   // return (
