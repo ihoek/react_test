@@ -31,8 +31,8 @@ const MainSubElement = (props) => {
         border: "3px solid black",
         borderRadius: 10,
       }}
-      onClick={(e) => {
-        setMainImg(e.target.src);
+      onClick={() => {
+        setMainImg(value);
         //console.log(e.target.src);
       }}
     >
