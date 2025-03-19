@@ -7,6 +7,7 @@ import MainPage2 from "./Main2/MainPage";
 //import MainDetail from "./MainPage1";
 //import reportWebVitals from "./reportWebVitals";
 import MainPage3 from "./Main3/MainPage";
+import MainPage4 from "./Coupang/MainPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -15,6 +16,7 @@ root.render(
     {/* 메인 첫번째 */}
     {/*<MainPage /> */}
     {/*<MainPage2 />*/}
-    <MainPage3 />
+    {/* <MainPage3 /> */}
+    <MainPage4 />
   </React.StrictMode>
 );
