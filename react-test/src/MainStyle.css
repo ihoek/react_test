@@ -62,3 +62,32 @@
     width: 200px;
   }
 }
+
+.main_wrap {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .select {
+    width: 200px;
+    margin: 20px 0px;
+  }
+  .input {
+    width: 200px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn {
+    width: 200px;
+  }
+  .table {
+    width: 80%;
+    color: white;
+  }
+}
