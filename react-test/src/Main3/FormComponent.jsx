@@ -28,7 +28,6 @@ const FormComponent = (props) => {
       console.log("getdata", data_lst);
 
       localStorage.setItem("content", JSON.stringify(data_lst));
-      //notification.warning({ message: "준비중" });
     },
   });
 

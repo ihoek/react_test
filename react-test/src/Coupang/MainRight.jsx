@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../App.css";
 import "../MainStyle.css";
-import { InputNumber, Button, Rate } from "antd";
+import { InputNumber, Button, Rate, Alert, notification } from "antd";
 
 //component
 import OptionElement from "./OptionElement";
@@ -18,12 +18,21 @@ const MainRight = (props) => {
 
   //변수 선언
   const [starvalue, setStarValue] = useState(5); //별점 변수
+  const [wowPrice, setWowPrice] = useState(17910); //와우 할인가
+  const [coupangPrice, setCoupangPrice] = useState(18410); //쿠팡할인가
+  const [number, setNumber] = useState(1); //상품 개수 inputnumber
 
   //inputNumber
   const onChange = (value) => {
-    console.log("changed", value);
+    //console.log("changed", value);
+    setCoupangPrice(value * 18410);
+    setWowPrice(value * 17910);
   };
 
+  //준비중입니다 alert
+  const alertcontent = () => {
+    notification.warning({ message: "준비중입니다" });
+  };
   //대표 사진 배열
   const img_arr = [
     { id: 1, value: bed1_color1, label: "베이지+아이보리" },
@@ -45,8 +54,8 @@ const MainRight = (props) => {
             </div>
           </div>
           <div className="container_title_right">
-            <button className="good"></button>
-            <div className="share"></div>
+            <button onClick={alertcontent} className="good"></button>
+            <div onClick={alertcontent} className="share"></div>
           </div>
         </div>
 
@@ -54,15 +63,21 @@ const MainRight = (props) => {
         <div className="container_price">
           <div className="origin_price">
             40% <div className="price">29,900원</div>
-            <div className="toggle_div">
+            <div className="toggle_div" onClick={alertcontent}>
               <img className="toggle" src={coupang_i} alt="coupang_i" />
             </div>
           </div>
           <div className="coupang_price">
-            <strong className="strong_price">18,410원</strong> 쿠팡판매가
+            <strong className="strong_price">
+              {coupangPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원
+            </strong>{" "}
+            쿠팡판매가
           </div>
           <div className="rocket_price">
-            <strong className="string_rocket">17,910원</strong> 와우할인가
+            <strong className="string_rocket">
+              {wowPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원
+            </strong>{" "}
+            와우할인가
             <div className="rocket_img">
               <img
                 className="imgstyle"
@@ -91,13 +106,14 @@ const MainRight = (props) => {
           <InputNumber
             className="option_input"
             min={1}
-            max={10}
-            defaultValue={3}
+            defaultValue={number}
             onChange={onChange}
             controls={true}
           />
-          <Button className="option_btn">장바구니 담기</Button>
-          <Button className="option_btn" type="primary">
+          <Button onClick={alertcontent} className="option_btn">
+            장바구니 담기
+          </Button>
+          <Button onClick={alertcontent} className="option_btn" type="primary">
             바로구매
           </Button>
         </div>
