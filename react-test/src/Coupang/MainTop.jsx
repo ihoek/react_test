@@ -20,16 +20,17 @@ const MainTop = (props) => {
   return (
     <>
       <div className="main_top">
+        <MainRight
+          color={color}
+          setColor={setColor}
+          setMainImage={setMainImage}
+        />
+
+        <MainLeft mainimage={mainimage} />
         <MainSide
           color={color}
           setColor={setColor}
           mainimage={mainimage}
-          setMainImage={setMainImage}
-        />
-        <MainLeft mainimage={mainimage} />
-        <MainRight
-          color={color}
-          setColor={setColor}
           setMainImage={setMainImage}
         />
       </div>

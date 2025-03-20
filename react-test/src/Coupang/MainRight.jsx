@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import "../App.css";
 import "../MainStyle.css";
-import { InputNumber, Button, Rate, Alert, notification } from "antd";
+import {
+  InputNumber,
+  Button,
+  Rate,
+  Alert,
+  notification,
+  ConfigProvider,
+} from "antd";
 
 //component
 import OptionElement from "./OptionElement";
