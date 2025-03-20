@@ -9,7 +9,9 @@ const MainLeft = (props) => {
   return (
     <>
       <div className="main_left">
-        <img className="imgstyle" src={mainimage} alt="" />
+        <div className="main_img">
+          <img className="imgstyle" src={mainimage} alt="main_img" />
+        </div>
       </div>
     </>
   );

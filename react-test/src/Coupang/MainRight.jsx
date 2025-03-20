@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../App.css";
 import "../MainStyle.css";
-import { InputNumber, Button } from "antd";
+import { InputNumber, Button, Rate } from "antd";
 
 //component
 import OptionElement from "./OptionElement";
@@ -10,10 +10,14 @@ import OptionElement from "./OptionElement";
 import bed1_color1 from "../img/bed1_color1.jpg";
 import bed1_color2 from "../img/bed1_color2.jpg";
 import bed1_color3 from "../img/bed1_color3.jpg";
+import coupang_i from "../img/coupang_i.png";
 
 const MainRight = (props) => {
   //props
   const { color, setColor, setMainImage } = props;
+
+  //변수 선언
+  const [starvalue, setStarValue] = useState(5); //별점 변수
 
   //inputNumber
   const onChange = (value) => {
@@ -33,33 +37,69 @@ const MainRight = (props) => {
         {/* title */}
         <div className="container_title">
           <div className="container_title_left">
-            <div>콤멧</div>
-            <div>콤멧 홈 베이직 차렵이불</div>
-            <div>별점 14,984개 상품평</div>
+            <div className="company">콤멧</div>
+            <div className="title">콤멧 홈 베이직 차렵이불</div>
+            <div className="star">
+              <Rate value={starvalue} disabled={true} />
+              <div className="count">14,984개 상품평</div>
+            </div>
           </div>
           <div className="container_title_right">
-            <div>좋아요</div>
-            <div>공유</div>
+            <button className="good"></button>
+            <div className="share"></div>
           </div>
         </div>
+
         {/* price */}
         <div className="container_price">
-          <div>40% 29,900원 토글</div>
-          <div>18,410원 쿠팡판매가</div>
-          <div>17,910원 와우할인가 로켓배송</div>
+          <div className="origin_price">
+            40% <div className="price">29,900원</div>
+            <div className="toggle_div">
+              <img className="toggle" src={coupang_i} alt="coupang_i" />
+            </div>
+          </div>
+          <div className="coupang_price">
+            <strong className="strong_price">18,410원</strong> 쿠팡판매가
+          </div>
+          <div className="rocket_price">
+            <strong className="string_rocket">17,910원</strong> 와우할인가
+            <div className="rocket_img">
+              <img
+                className="imgstyle"
+                src="https://image10.coupangcdn.com/image/badges/rocket/rocket_logo.png"
+                alt="rocket"
+              />
+            </div>
+          </div>
         </div>
 
         {/* shipping */}
         <div className="container_shipping">
-          <div>무료배송 (로켓배송 상품 19,800원 이상 구매 시)</div>
-          <div>내일(목) 3/20 도착 보장(55분 내 주문 시 / 서울, 경기 기준)</div>
+          <div className="shipping_title">
+            <div className="shipping_free">무료배송</div> (로켓배송 상품
+            19,800원 이상 구매 시)
+          </div>
+          <div className="shipping_sub">
+            <div className="shipping_weeken">내일(목) 3/20</div>
+            <div className="shipping_arrive">도착 보장</div>(55분 내 주문 시 /
+            서울, 경기 기준)
+          </div>
         </div>
 
         {/* option */}
         <div className="container_option">
-          <InputNumber min={1} max={10} defaultValue={3} onChange={onChange} />
-          <Button>장바구니 담기</Button>
-          <Button type="primary">바로구매</Button>
+          <InputNumber
+            className="option_input"
+            min={1}
+            max={10}
+            defaultValue={3}
+            onChange={onChange}
+            controls={true}
+          />
+          <Button className="option_btn">장바구니 담기</Button>
+          <Button className="option_btn" type="primary">
+            바로구매
+          </Button>
         </div>
 
         {/* choose - color */}

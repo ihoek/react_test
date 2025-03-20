@@ -94,6 +94,7 @@
 
 .coupang_wrap {
   max-width: 1280px;
+
   width: 100%;
   height: 800px;
   display: flex;
@@ -101,6 +102,7 @@
   justify-content: center;
   align-items: center;
   margin: 0px auto;
+  margin-top: 40px;
 
   .main_top {
     display: flex;
@@ -124,7 +126,6 @@
   .main_left {
     width: 40%;
     height: 100%;
-    background-color: green;
   }
   .main_right {
     width: 50%;
@@ -137,30 +138,167 @@
       width: 100%;
       height: 20%;
       justify-content: space-between;
-      background-color: yellow;
+      border-bottom: 1px solid #ccc;
     }
     .container_title_right {
       display: flex;
+      align-items: end;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      gap: 10px;
+
+      .good {
+        width: 40px;
+        height: 40px;
+        border: 0 none;
+        cursor: pointer;
+        outline: 0;
+        background: url(//img1a.coupangcdn.com/image/dragonstone/sdp/PCSDP_imageasset_180417-min.png)
+          no-repeat -218px -209px;
+      }
+      .share {
+        border: 0 none;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        outline: 0;
+        background: url(//img1a.coupangcdn.com/image/dragonstone/sdp/PCSDP_imageasset_180417-min.png)
+          no-repeat -306px -209px;
+      }
+    }
+    .container_title_left {
+      .company {
+        font-size: 12px;
+        color: #346aff;
+        padding-bottom: 6px;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .star {
+        display: flex;
+      }
+      .count {
+        margin-left: 5px;
+        color: #346aff;
+      }
     }
     .container_price {
       display: flex;
       flex-direction: column;
       width: 100%;
       height: 20%;
-      background-color: bisque;
+      justify-content: center;
+      gap: 3px;
+      border-bottom: 1px solid #eee;
+
+      .origin_price {
+        display: flex;
+        font-size: 14px;
+      }
+      .price {
+        text-decoration: line-through;
+        margin: 0px 3px;
+      }
+      .toggle_div {
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
+        margin-left: 2px;
+        margin-top: 2px;
+      }
+      .toggle {
+        width: 100%;
+        height: 100%;
+      }
+      .coupang_price {
+        font-size: 14px;
+      }
+      .strong_price {
+        font-size: 20px;
+        line-height: 21px;
+      }
+      .string_rocket {
+        font-size: 20px;
+        line-height: 21px;
+        color: #cb1400;
+      }
+      .rocket_price {
+        display: flex;
+        font-size: 14px;
+        color: #cb1400;
+      }
+      .rocket_img {
+        display: flex;
+        margin: auto 0px;
+        margin-left: 5px;
+        width: 50px;
+        height: 14px;
+      }
     }
     .container_shipping {
       display: flex;
       flex-direction: column;
       width: 100%;
       height: 15%;
-      background-color: skyblue;
+      font-size: 12px;
+      gap: 5px;
+      justify-content: center;
+      border-bottom: 1px solid #eee;
+
+      .shipping_title {
+        display: flex;
+      }
+      .shipping_free {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .shipping_sub {
+        display: flex;
+        align-items: end;
+      }
+      .shipping_weeken {
+        font-weight: bold;
+        color: #00891a;
+        font-size: 14px;
+        margin-right: 5px;
+      }
+      .shipping_arrive {
+        font-weight: normal;
+        color: #00891a;
+        margin-right: 4px;
+      }
     }
     .container_option {
       display: flex;
       width: 100%;
       height: 15%;
-      background-color: orange;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+
+      .option_input {
+        height: 40px;
+        width: 80px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .option_btn {
+        display: block;
+        line-height: 40px;
+        width: 191px;
+        height: 40px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        border: 1px solid #346aff;
+        border-radius: 0px;
+      }
     }
     .container_choose {
       display: flex;
@@ -168,7 +306,6 @@
       gap: 30px;
       width: 100%;
       height: 30%;
-      background-color: aliceblue;
     }
   }
   .side_element {
@@ -179,7 +316,8 @@
   .container_options {
     width: 120px;
     height: 140px;
-    border: 2px solid black;
+    border: 1px solid #768695;
+    border-radius: 4px;
     cursor: pointer;
   }
   .imgstyle {
@@ -187,7 +325,21 @@
     height: 100%;
   }
   .img_div {
-    width: 100%;
-    height: 80%;
+    width: 100px;
+    height: 100px;
+  }
+  .img_title {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+  }
+  .main_img {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
   }
 }

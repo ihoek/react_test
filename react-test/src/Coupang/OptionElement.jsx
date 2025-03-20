@@ -18,7 +18,7 @@ const OptionElement = (props) => {
       >
         <div className="img_div">
           <img className="imgstyle" src={value} alt="bed" />
-          <div>{label}</div>
+          <div className="img_title">{label}</div>
         </div>
       </div>
     </>
