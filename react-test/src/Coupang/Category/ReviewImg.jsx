@@ -6,7 +6,14 @@ import { Button } from "antd";
 
 //review 컴포넌트에 쓰일 element
 const ReviewImg = (props) => {
-  return <></>;
+  //props
+  const { imgsrc } = props;
+
+  return (
+    <>
+      <div className=""></div>
+    </>
+  );
 };
 
 export default ReviewImg;

@@ -249,3 +249,13 @@
     color: "#000";
   }
 }
+
+.review_img {
+  display: flex;
+  width: 100%;
+  height: 160px;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

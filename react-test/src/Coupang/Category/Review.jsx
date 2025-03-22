@@ -6,6 +6,10 @@ import { Rate, ConfigProvider } from "antd";
 
 //component
 import ReviewImg from "./ReviewImg";
+import SideElement from "../SideElement";
+
+//list
+import { photo_lst } from "./imglist";
 
 //상품평
 const Review = (props) => {
@@ -13,6 +17,7 @@ const Review = (props) => {
 
   //변수 선언
   const [starvalue, setStarValue] = useState(5); //별점 변수
+  const type = "review";
 
   return (
     <>
@@ -41,8 +46,12 @@ const Review = (props) => {
           <span className="review_average">14,988</span>
           <span className="review_detail">자세히보기</span>
         </div>
-        {/* 상품평 이미지 */}
-        <ReviewImg />
+        <div className="review_img">
+          {/* 상품평 이미지 */}
+          {photo_lst.map((item) => (
+            <SideElement imgsrc={item} type={type} />
+          ))}
+        </div>
       </div>
     </>
   );
