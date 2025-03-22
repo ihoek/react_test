@@ -3,6 +3,8 @@ import "../CSS/category.css";
 
 //component
 import ProductDetails from "./ProductDetails";
+import Review from "./Review";
+import Inquiry from "./inquiry";
 
 //antd
 import { Tabs, ConfigProvider } from "antd";
@@ -10,9 +12,7 @@ import { Tabs, ConfigProvider } from "antd";
 const Category = (props) => {
   //props
 
-  const onChange = (key) => {
-    console.log(key);
-  };
+  //해당 탭을 누를 시 이동할 탭 리스트
   const items = [
     {
       key: "1",
@@ -22,12 +22,12 @@ const Category = (props) => {
     {
       key: "2",
       label: "상품평",
-      children: "Content of Tab Pane 2",
+      children: <Review />,
     },
     {
       key: "3",
       label: "상품문의",
-      children: "Content of Tab Pane 3",
+      children: <Inquiry />,
     },
     {
       key: "4",
@@ -47,18 +47,15 @@ const Category = (props) => {
               Tabs: {
                 itemSelectedColor: "#000",
                 itemHoverColor: "#000",
+                titleFontSize: 16,
+                inkBarColor: "none",
+                cardGutter: 4,
                 cardPadding: "10px 120px",
               },
             },
           }}
         >
-          <Tabs
-            defaultActiveKey="1"
-            centered
-            type="card"
-            items={items}
-            onChange={onChange}
-          />
+          <Tabs defaultActiveKey="1" centered type="card" items={items} />
         </ConfigProvider>
       </div>
     </>

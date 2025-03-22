@@ -150,6 +150,7 @@ const MainSub = (props) => {
                   origin_price={element.origin_price}
                   discount_price={element.discount_price}
                   goal={element.goal}
+                  key={element.id}
                 />
               </SwiperSlide>
             ))}
