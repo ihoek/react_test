@@ -26,7 +26,7 @@ const DetailRow = (props) => {
           <div className="fristrow">
             {fristrow.map((element, index) => (
               <CategoryTable
-                key={element.id}
+                key={"first" + element.id}
                 title={element.title}
                 content={element.content}
               />
@@ -35,7 +35,7 @@ const DetailRow = (props) => {
           <div className="secondrow">
             {secondrow.map((element, index) => (
               <CategoryTable
-                key={element.id}
+                key={"second" + element.id}
                 title={element.title}
                 content={element.content}
               />

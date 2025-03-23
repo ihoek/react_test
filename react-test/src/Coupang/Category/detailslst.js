@@ -1,3 +1,5 @@
+import { how_photo_lst } from "./imglist";
+
 //상품 상세 테이블 리스트
 export const details_lst = [
   { id: 1, title: "제품 소재", content: ["폴리에스터"] },
@@ -275,4 +277,88 @@ export const restrictions = [
 //판매자 정보
 export const seller_information = [
   { id: 1, title: "판매자", content: ["쿠팡 1577-]7011"] },
+];
+
+//이런 상품은 어때요 데이터
+export const how_product = [
+  {
+    id: 1,
+    title: "코멧홈 베이직 차렵이불+베개커버 세트",
+    price: 224490,
+    discount: "31% 할인",
+    review: 124,
+    imgsrc: how_photo_lst[0],
+  },
+  {
+    id: 2,
+    title: "프리미엄 오가닉 순면 차렵이불 세트",
+    price: 189000,
+    discount: "25% 할인",
+    review: 98,
+    imgsrc: how_photo_lst[1],
+  },
+  {
+    id: 3,
+    title: "초극세사 따뜻한 겨울 차렵이불",
+    price: 249000,
+    discount: "40% 할인",
+    review: 230,
+    imgsrc: how_photo_lst[2],
+  },
+  {
+    id: 4,
+    title: "사계절용 통기성 좋은 홑이불",
+    price: 89000,
+    discount: "20% 할인",
+    review: 76,
+    imgsrc: how_photo_lst[3],
+  },
+  {
+    id: 5,
+    title: "알러지 케어 방수 매트리스 커버",
+    price: 69000,
+    discount: "35% 할인",
+    review: 150,
+    imgsrc: how_photo_lst[4],
+  },
+  {
+    id: 6,
+    title: "100% 오가닉 코튼 항균 차렵이불",
+    price: 49000,
+    discount: "18% 할인",
+    review: 45,
+    imgsrc: how_photo_lst[5],
+  },
+  {
+    id: 7,
+    title: "고급형 전기요 온열 패드",
+    price: 59000,
+    discount: "30% 할인",
+    review: 200,
+    imgsrc: how_photo_lst[6],
+  },
+  {
+    id: 8,
+    title: "초경량 극세사 포근한 겨울 이불",
+    price: 89000,
+    discount: "27% 할인",
+    review: 112,
+    imgsrc: how_photo_lst[7],
+  },
+  {
+    id: 9,
+    title: "3D 입체 패턴 구스다운 이불",
+    price: 129000,
+    discount: "22% 할인",
+    review: 178,
+    imgsrc: how_photo_lst[8],
+  },
+  {
+    id: 10,
+    title: "양면 사용 가능한 리버시블 차렵이불",
+    price: 29000,
+    discount: "50% 할인",
+    review: 321,
+    imgsrc: how_photo_lst[9],
+  },
 ];

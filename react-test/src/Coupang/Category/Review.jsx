@@ -49,8 +49,8 @@ const Review = (props) => {
         {/* 이미지 */}
         <div className="review_img">
           {/* 상품평 이미지 */}
-          {photo_lst.map((item) => (
-            <SideElement imgsrc={item} type={type} />
+          {photo_lst.map((item, index) => (
+            <SideElement key={index} imgsrc={item} type={type} />
           ))}
         </div>
         {/* 후기 */}

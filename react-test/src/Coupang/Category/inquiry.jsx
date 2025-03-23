@@ -51,9 +51,8 @@ const Inquiry = (props) => {
         <div>
           {/* 답변 */}
           {answerlst.map((element) => (
-            <>
+            <span key={"question" + element.question.id}>
               <Question
-                key={element.question.id}
                 content={element.question.content}
                 color={element.question.color}
                 size={element.question.size}
@@ -61,13 +60,12 @@ const Inquiry = (props) => {
               />
 
               <Answer
-                key={element.answer.id}
                 content={element.answer.content}
                 color={element.answer.color}
                 size={element.answer.size}
                 date={element.answer.date}
               />
-            </>
+            </span>
           ))}
         </div>
       </div>
