@@ -142,7 +142,7 @@ const MainSub = (props) => {
             //onSwiper={(swiper) => console.log(swiper)}
           >
             {special_lst.map((element) => (
-              <SwiperSlide>
+              <SwiperSlide key={element.id}>
                 <SubElement
                   imgsrc={element.imgsrc}
                   title={element.title}
@@ -150,7 +150,6 @@ const MainSub = (props) => {
                   origin_price={element.origin_price}
                   discount_price={element.discount_price}
                   goal={element.goal}
-                  key={element.id}
                 />
               </SwiperSlide>
             ))}

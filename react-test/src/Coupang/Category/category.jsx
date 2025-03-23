@@ -5,6 +5,7 @@ import "../CSS/category.css";
 import ProductDetails from "./ProductDetails";
 import Review from "./Review";
 import Inquiry from "./inquiry";
+import Shipping from "./Shipping";
 
 //antd
 import { Tabs, ConfigProvider } from "antd";
@@ -32,7 +33,7 @@ const Category = (props) => {
     {
       key: "4",
       label: "배송/교환/반품 안내",
-      children: "Content of Tab Pane 4",
+      children: <Shipping />,
     },
   ];
 

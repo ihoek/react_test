@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import "../CSS/category.css";
 
 //antd
-import { Rate, ConfigProvider } from "antd";
+import { Rate, ConfigProvider, Input } from "antd";
 
 //component
-import ReviewImg from "./ReviewImg";
 import SideElement from "../SideElement";
+import ReviewTitle from "./Reviews_title";
 
 //list
 import { photo_lst } from "./imglist";
@@ -46,11 +46,18 @@ const Review = (props) => {
           <span className="review_average">14,988</span>
           <span className="review_detail">자세히보기</span>
         </div>
+        {/* 이미지 */}
         <div className="review_img">
           {/* 상품평 이미지 */}
           {photo_lst.map((item) => (
             <SideElement imgsrc={item} type={type} />
           ))}
+        </div>
+        {/* 후기 */}
+        <div className="reviews_content">
+          <div className="reviews_title">
+            <ReviewTitle />
+          </div>
         </div>
       </div>
     </>
