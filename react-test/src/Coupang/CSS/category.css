@@ -386,3 +386,40 @@
     width: 50%;
   }
 }
+
+.pruduct_how {
+  height: 100%;
+  margin: 30px auto;
+}
+.other_people {
+  height: 100%;
+  border-top: 1px solid #eee;
+}
+
+.report {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 15px 13px;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+
+  .report_btn {
+    display: block;
+    width: 83px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 11px;
+    color: #555;
+    text-align: center;
+    line-height: 25px;
+    background-color: #fff;
+  }
+
+  .report_div {
+    color: #888;
+    font-size: 11px;
+    line-height: 27px;
+  }
+}

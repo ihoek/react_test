@@ -68,6 +68,13 @@ const Inquiry = (props) => {
             </span>
           ))}
         </div>
+        <div className="report">
+          <span className="report_div">
+            판매 부적격 상품 또는 허위과장광고 및 지식재산권을 침해하는 상품의
+            경우 신고하여 주시기 바랍니다.
+          </span>
+          <Button className="report_btn">신고하기</Button>
+        </div>
       </div>
     </>
   );

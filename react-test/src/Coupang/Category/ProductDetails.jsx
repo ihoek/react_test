@@ -8,11 +8,11 @@ import { Button } from "antd";
 import mainImage from "../../img/miancontent.jpg";
 
 //list
-import { how_product } from "./detailslst";
 
 //component
 import DetailRow from "./DetailRow";
 import ProductColumn from "./ProductColumn";
+import OtherColumn from "./OtherColumn";
 
 const ProductDetails = (props) => {
   //props
@@ -61,7 +61,7 @@ const ProductDetails = (props) => {
         <ProductColumn type={"how"} />
       </div>
       <div className="other_people">
-        <ProductColumn type={"other"} />
+        <OtherColumn type={"other"} />
       </div>
     </>
   );

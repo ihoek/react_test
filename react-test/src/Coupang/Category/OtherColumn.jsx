@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import "./HowProduct.css";
+import "./OtherProduct.css";
 
 //antd
 import { Button } from "antd";
 
 //list
-import { how_product } from "./detailslst";
+import { other_product } from "./detailslst";
 
 //component
-import HowProduct from "./HowProduct";
+import OtherProduct from "./OtherProduct";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,16 +20,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const ProductColumn = (props) => {
+const OtherColumn = (props) => {
   //props
   const { type } = props;
 
   //useState
   const [mainTitle, setMainTitle] = useState("");
+  //const [datalst, setDataLst] = useState("");
 
   useEffect(() => {
-    if (type === "how") {
-      setMainTitle("이런 상품은 어때요?");
+    if (type === "other") {
+      setMainTitle("다른 고객이 함께 본 상품");
+      //setDataLst(how_product);
     }
   }, []);
 
@@ -39,19 +41,18 @@ const ProductColumn = (props) => {
         <span className="maintitle">{mainTitle}</span>
       </div>
 
-      <div className="how_products">
+      <div className="other_products">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          slidesPerView={9}
+          slidesPerView={5}
         >
-          {how_product.map((element) => (
+          {other_product.map((element) => (
             <SwiperSlide key={element.id}>
-              <HowProduct
+              <OtherProduct
                 key={element.id}
                 imgsrc={element.imgsrc}
                 title={element.title}
                 price={element.price}
-                discount={element.discount}
                 review={element.review}
               />
             </SwiperSlide>
@@ -62,4 +63,4 @@ const ProductColumn = (props) => {
   );
 };
 
-export default ProductColumn;
+export default OtherColumn;

@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import "../CSS/category.css";
 
 //antd
-import { Rate, ConfigProvider, Input } from "antd";
+import { Rate, ConfigProvider, Input, Pagination } from "antd";
 
 //component
 import SideElement from "../SideElement";
 import ReviewTitle from "./Reviews_title";
+import ReviewContent from "./ReviewContent";
 
 //list
 import { photo_lst } from "./imglist";
@@ -17,7 +18,16 @@ const Review = (props) => {
 
   //변수 선언
   const [starvalue, setStarValue] = useState(5); //별점 변수
+  const [pagination, setPagination] = useState(1); //현재 페이지 번호
+  const [paginationsize, setPaginationSize] = useState(5);
   const type = "review";
+
+  //페이지네이션
+  const onChange = (current, pageSize) => {
+    setPagination(current);
+    setPaginationSize(pageSize);
+    console.log(current, pageSize);
+  };
 
   return (
     <>
@@ -57,6 +67,19 @@ const Review = (props) => {
         <div className="reviews_content">
           <div className="reviews_title">
             <ReviewTitle />
+          </div>
+          {/* 후기 내용 */}
+          <div>
+            <ReviewContent
+              pagination={pagination}
+              paginationsize={paginationsize}
+            />
+            <Pagination
+              onChange={onChange}
+              defaultCurrent={1}
+              defaultPageSize={5}
+              total={50}
+            />
           </div>
         </div>
       </div>

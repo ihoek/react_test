@@ -14,10 +14,12 @@ const SideElement = (props) => {
   return (
     <>
       {type === "review" ? (
+        //상품평에 사용될 이미지
         <div className="side_element">
           <img className="imgstyle" src={imgsrc} alt="side img" />
         </div>
       ) : (
+        // 메인에 사용될 이미지
         <div className="side_element" onMouseEnter={() => onMouseIn(imgsrc)}>
           <img className="imgstyle" src={imgsrc} alt="side img" />
         </div>

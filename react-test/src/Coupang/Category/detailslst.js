@@ -1,4 +1,4 @@
-import { how_photo_lst } from "./imglist";
+import { how_photo_lst, other_photo_lst } from "./imglist";
 
 //상품 상세 테이블 리스트
 export const details_lst = [
@@ -360,5 +360,223 @@ export const how_product = [
     discount: "50% 할인",
     review: 321,
     imgsrc: how_photo_lst[9],
+  },
+];
+
+//다른 고객이 함께 본 상품 데이터
+export const other_product = [
+  {
+    id: 1,
+    title: "코멧홈 베이직 차렵이불+베개커버 세트",
+    price: 224490,
+    review: 124,
+    imgsrc: other_photo_lst[0],
+  },
+  {
+    id: 2,
+    title: "프리미엄 오가닉 순면 차렵이불 세트",
+    price: 189000,
+    review: 98,
+    imgsrc: other_photo_lst[1],
+  },
+  {
+    id: 3,
+    title: "초극세사 따뜻한 겨울 차렵이불",
+    price: 249000,
+    review: 230,
+    imgsrc: other_photo_lst[2],
+  },
+  {
+    id: 4,
+    title: "사계절용 통기성 좋은 홑이불",
+    price: 89000,
+    review: 76,
+    imgsrc: other_photo_lst[3],
+  },
+  {
+    id: 5,
+    title: "알러지 케어 방수 매트리스 커버",
+    price: 69000,
+    review: 150,
+    imgsrc: other_photo_lst[4],
+  },
+  {
+    id: 6,
+    title: "100% 오가닉 코튼 항균 차렵이불",
+    price: 49000,
+    review: 45,
+    imgsrc: other_photo_lst[5],
+  },
+  {
+    id: 7,
+    title: "고급형 전기요 온열 패드",
+    price: 59000,
+    review: 200,
+    imgsrc: other_photo_lst[6],
+  },
+  {
+    id: 8,
+    title: "초경량 극세사 포근한 겨울 이불",
+    price: 89000,
+    review: 112,
+    imgsrc: other_photo_lst[7],
+  },
+  {
+    id: 9,
+    title: "3D 입체 패턴 구스다운 이불",
+    price: 129000,
+    review: 178,
+    imgsrc: other_photo_lst[8],
+  },
+  {
+    id: 10,
+    title: "양면 사용 가능한 리버시블 차렵이불",
+    price: 29000,
+    review: 321,
+    imgsrc: other_photo_lst[9],
+  },
+];
+
+//최신순 상품평
+export const review_lst = [
+  {
+    id: 1,
+    nickname: "미나리0324",
+    date: "2025.03.23",
+    choice: "코멧 홈 베이직 차렵이불, 차콜+그레이, 슈퍼싱글",
+    content: "가벼운데 생각보다 포근하고 따뜻함",
+  },
+  {
+    id: 2,
+    nickname: "바람솔솔",
+    date: "2025.03.21",
+    choice: "프리미엄 오가닉 순면 차렵이불, 화이트, 퀸",
+    content: "부드럽고 촉감이 좋아요. 잘 샀습니다!",
+  },
+  {
+    id: 3,
+    nickname: "이불덕후",
+    date: "2025.03.20",
+    choice: "초극세사 겨울 차렵이불, 네이비, 슈퍼싱글",
+    content: "색깔도 예쁘고 보온성도 좋아서 만족해요.",
+  },
+  {
+    id: 4,
+    nickname: "하늘바람",
+    date: "2025.03.19",
+    choice: "사계절용 홑이불, 아이보리, 퀸",
+    content: "여름용으로 딱 좋아요. 시원하고 가벼워요!",
+  },
+  {
+    id: 5,
+    nickname: "포근해요",
+    date: "2025.03.18",
+    choice: "알러지 케어 방수 매트리스 커버, 베이지, 킹",
+    content: "진짜 방수 잘 됩니다! 아이 키우는 집에 추천",
+  },
+  {
+    id: 6,
+    nickname: "달콤이",
+    date: "2025.03.17",
+    choice: "100% 오가닉 코튼 항균 차렵이불, 라이트핑크, 슈퍼싱글",
+    content: "부드럽고 안심하고 사용할 수 있어서 좋아요.",
+  },
+  {
+    id: 7,
+    nickname: "블루문",
+    date: "2025.03.16",
+    choice: "고급형 전기요 온열 패드, 브라운, 퀸",
+    content: "온도 조절 잘 되고 따뜻해서 겨울에 최고!",
+  },
+  {
+    id: 8,
+    nickname: "나른한오후",
+    date: "2025.03.15",
+    choice: "초경량 극세사 이불, 와인, 슈퍼싱글",
+    content: "너무 가볍고 부드러워서 꿀잠 잡니다!",
+  },
+  {
+    id: 9,
+    nickname: "구스사랑",
+    date: "2025.03.14",
+    choice: "3D 입체 패턴 구스다운 이불, 라이트블루, 킹",
+    content: "구스다운이라 정말 따뜻해요. 강추합니다!",
+  },
+  {
+    id: 10,
+    nickname: "차분한밤",
+    date: "2025.03.13",
+    choice: "양면 사용 가능한 리버시블 차렵이불, 차콜, 슈퍼싱글",
+    content: "양면이라 기분따라 바꿔 쓸 수 있어 좋아요.",
+  },
+  {
+    id: 11,
+    nickname: "해피룸",
+    date: "2025.03.12",
+    choice: "코멧 홈 베이직 차렵이불, 네이비, 퀸",
+    content: "색깔도 고급지고 폭신해서 좋아요.",
+  },
+  {
+    id: 12,
+    nickname: "소프트터치",
+    date: "2025.03.11",
+    choice: "프리미엄 오가닉 순면 차렵이불, 그레이, 슈퍼싱글",
+    content: "세탁 후에도 부드러움이 유지돼요.",
+  },
+  {
+    id: 13,
+    nickname: "달빛이불",
+    date: "2025.03.10",
+    choice: "초극세사 겨울 차렵이불, 베이지, 퀸",
+    content: "보들보들하고 따뜻해서 좋아요!",
+  },
+  {
+    id: 14,
+    nickname: "별빛소녀",
+    date: "2025.03.09",
+    choice: "사계절용 홑이불, 네이비, 슈퍼싱글",
+    content: "통기성이 좋아서 한여름에도 잘 쓸 것 같아요.",
+  },
+  {
+    id: 15,
+    nickname: "아늑한밤",
+    date: "2025.03.08",
+    choice: "알러지 케어 방수 매트리스 커버, 화이트, 퀸",
+    content: "진드기 걱정 없이 사용할 수 있어 좋아요!",
+  },
+  {
+    id: 16,
+    nickname: "촉촉이",
+    date: "2025.03.07",
+    choice: "100% 오가닉 코튼 항균 차렵이불, 민트, 슈퍼싱글",
+    content: "컬러도 예쁘고 피부에 닿는 느낌이 좋아요.",
+  },
+  {
+    id: 17,
+    nickname: "웜하트",
+    date: "2025.03.06",
+    choice: "고급형 전기요 온열 패드, 와인, 킹",
+    content: "정말 따뜻해서 겨울이 걱정 없어요.",
+  },
+  {
+    id: 18,
+    nickname: "코코베리",
+    date: "2025.03.05",
+    choice: "초경량 극세사 이불, 블루, 퀸",
+    content: "세탁도 편하고 촉감이 너무 좋아요.",
+  },
+  {
+    id: 19,
+    nickname: "구름이불",
+    date: "2025.03.04",
+    choice: "3D 입체 패턴 구스다운 이불, 네이비, 슈퍼싱글",
+    content: "보온성 짱! 호텔 침구 느낌이에요.",
+  },
+  {
+    id: 20,
+    nickname: "따뜻한하루",
+    date: "2025.03.03",
+    choice: "양면 사용 가능한 리버시블 차렵이불, 베이지, 퀸",
+    content: "이불 한 장으로 두 가지 느낌 낼 수 있어서 좋아요!",
   },
 ];
