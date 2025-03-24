@@ -580,3 +580,13 @@ export const review_lst = [
     content: "이불 한 장으로 두 가지 느낌 낼 수 있어서 좋아요!",
   },
 ];
+
+//상품관련 카테고리
+export const productcategory = [
+  { id: 1, categroy: "거위털/오리털이불" },
+  { id: 2, categroy: "양모/알파카이불" },
+  { id: 3, categroy: "겹이불/홑이불" },
+  { id: 4, categroy: "코타츠이불" },
+  { id: 5, categroy: "한실/예단이불" },
+  { id: 6, categroy: "이불커버" },
+];

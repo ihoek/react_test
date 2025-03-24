@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import "../App.css";
-import "../MainStyle.css";
+import "./Main.css";
 
 import { Rate, ConfigProvider, Progress } from "antd";
 

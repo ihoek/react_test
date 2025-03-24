@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import "../App.css";
-import "../MainStyle.css";
+import "./Main.css";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -125,6 +124,31 @@ const MainSub = (props) => {
     },
   ];
 
+  const [sliderStlyeSize, setSliderStyleSize] = useState(5);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 750) {
+        setSliderStyleSize(3);
+      } else if (window.innerWidth <= 1024) {
+        setSliderStyleSize(4);
+      } else {
+        setSliderStyleSize(5);
+      }
+    };
+
+    // 초기 로드 시 크기 설정
+    handleResize();
+
+    // 이벤트 리스너 추가
+    window.addEventListener("resize", handleResize);
+
+    // cleanup (이벤트 리스너 제거)
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div className="main_sub">
@@ -136,7 +160,7 @@ const MainSub = (props) => {
         <div className="sub_swiper">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            slidesPerView={5}
+            slidesPerView={sliderStlyeSize}
 
             //onSlideChange={() => console.log("slide change")}
             //onSwiper={(swiper) => console.log(swiper)}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import "../App.css";
-import "../MainStyle.css";
+
+// import "../MainStyle.css";
+import "./Main.css";
 
 //component
 import MainSide from "./MainSide";
@@ -9,8 +10,6 @@ import MainRight from "./MainRight";
 
 //image import
 import bed1_color1 from "../img/bed1_color1.jpg";
-import bed1_color2 from "../img/bed1_color2.jpg";
-import bed1_color3 from "../img/bed1_color3.jpg";
 
 const MainTop = (props) => {
   //변수 선언
@@ -20,19 +19,25 @@ const MainTop = (props) => {
   return (
     <>
       <div className="main_top">
+        {/* 메인 상품의 상세 정보 */}
         <MainRight
           color={color}
           setColor={setColor}
           setMainImage={setMainImage}
         />
 
-        <MainLeft mainimage={mainimage} />
-        <MainSide
-          color={color}
-          setColor={setColor}
-          mainimage={mainimage}
-          setMainImage={setMainImage}
-        />
+        <div className="main_top_img">
+          {/* 메인 상품의 단독 이미지 */}
+          <MainLeft mainimage={mainimage} />
+
+          {/* 메인 이미지 상세 컷 */}
+          <MainSide
+            color={color}
+            setColor={setColor}
+            mainimage={mainimage}
+            setMainImage={setMainImage}
+          />
+        </div>
       </div>
     </>
   );

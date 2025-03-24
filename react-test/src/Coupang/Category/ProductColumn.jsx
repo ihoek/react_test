@@ -30,6 +30,10 @@ const ProductColumn = (props) => {
   useEffect(() => {
     if (type === "how") {
       setMainTitle("이런 상품은 어때요?");
+    } else if (type === "over") {
+      setMainTitle("4점 이상 리뷰가 좋은 상품");
+    } else if (type === "special") {
+      setMainTitle("전세계 핫딜 로켓직구 글로벌특가");
     }
   }, []);
 

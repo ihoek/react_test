@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../MainStyle.css";
+import "./Main.css";
 
 //component
 import SideElement from "./SideElement";

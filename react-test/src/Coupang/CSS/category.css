@@ -4,7 +4,7 @@
   height: 100px;
 }
 .productdetail_container {
-  height: 1150px;
+  height: 1300px;
   overflow: hidden;
 }
 .productdetails {
@@ -95,7 +95,6 @@
 }
 .row3_left,
 .row3_right {
-  display: flex;
   width: 50%;
 }
 .review {
@@ -143,6 +142,11 @@
     line-height: 44px;
     font-size: 12px;
     color: #346aff;
+  }
+  .pruduct_how {
+    width: 100%;
+    height: 100%;
+    margin: 30px auto;
   }
 }
 
@@ -385,6 +389,10 @@
     flex-direction: column;
     width: 50%;
   }
+  .other_people {
+    height: 100%;
+    border-top: 1px solid #eee;
+  }
 }
 
 .pruduct_how {
@@ -421,5 +429,140 @@
     color: #888;
     font-size: 11px;
     line-height: 27px;
+  }
+}
+
+.tooChoose {
+  width: 100%;
+  height: 300px;
+
+  .choose_title {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+  }
+  .choose_title_main {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    line-height: 20px;
+  }
+  .choose_content {
+    height: 160px;
+    background-color: #f4f6f8;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 10px 0px;
+  }
+
+  .choose_img {
+    width: 160px;
+    height: 160px;
+    margin-left: 10px;
+  }
+
+  .imgstyle {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .advertising {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    color: #111;
+    opacity: 0.3;
+    font-style: normal;
+  }
+  .choose_content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content_left {
+    display: flex;
+  }
+  .content_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  .choose_sub {
+    display: flex;
+    flex-direction: row;
+  }
+  .choose_review {
+    margin-left: 7px;
+    vertical-align: top;
+    font-size: 18px;
+    color: #888;
+    line-height: 26px;
+    display: inline-block;
+    height: 24px;
+  }
+  .choose_text {
+    font-size: 22px;
+    color: #333;
+    letter-spacing: -0.9px;
+  }
+  .choose_adbtn {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 0;
+    background-size: 56px 56px;
+    overflow: hidden;
+    margin: auto 0px;
+    margin-right: 10px;
+  }
+}
+
+.relevant {
+  color: #212b36;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+.relevant_container {
+  display: flex;
+  gap: 25px;
+}
+.relevant_element {
+  color: #346aff;
+}
+
+.ant-tabs-tab {
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 750px) {
+  .ant-tabs-tab {
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 8px 100px;
+  }
+  .details_table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+  }
+  .row1_2,
+  .row3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .fristrow,
+  .secondrow,
+  .row3_left,
+  .row3_right {
+    width: 100%;
+  }
+
+  .productdetails {
+    display: flex;
+    margin: 0px auto;
+    width: 80%;
   }
 }

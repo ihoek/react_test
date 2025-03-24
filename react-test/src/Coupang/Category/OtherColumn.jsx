@@ -32,6 +32,12 @@ const OtherColumn = (props) => {
     if (type === "other") {
       setMainTitle("다른 고객이 함께 본 상품");
       //setDataLst(how_product);
+    } else if (type === "purchase") {
+      setMainTitle("다른 고객이 함께 구매한 상품");
+    } else if (type === "things") {
+      setMainTitle("코멧의 다른 상품들");
+    } else if (type === "recommendation") {
+      setMainTitle("연관 추천 상품");
     }
   }, []);
 

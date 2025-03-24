@@ -8,6 +8,7 @@ import { Rate, ConfigProvider, Input, Pagination } from "antd";
 import SideElement from "../SideElement";
 import ReviewTitle from "./Reviews_title";
 import ReviewContent from "./ReviewContent";
+import ProductColumn from "./ProductColumn";
 
 //list
 import { photo_lst } from "./imglist";
@@ -81,6 +82,10 @@ const Review = (props) => {
               total={50}
             />
           </div>
+        </div>
+        {/* 4점 이상 리뷰가 좋은 상품 */}
+        <div className="pruduct_how">
+          <ProductColumn type={"over"} />
         </div>
       </div>
     </>

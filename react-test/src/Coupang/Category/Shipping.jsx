@@ -14,6 +14,10 @@ import {
 
 //component
 import CategoryTable from "./CategoryTable";
+import OtherColumn from "./OtherColumn";
+import ProductColumn from "./ProductColumn";
+import TooChoose from "./TooChoose";
+import ProductCategtoy from "./ProductCategory";
 
 //배송/교환/반품 안내 컴포넌트
 const Shipping = (props) => {
@@ -113,6 +117,30 @@ const Shipping = (props) => {
             content={element.content}
           />
         ))}
+        {/* 다른 고객 */}
+        <div className="other_people">
+          <OtherColumn type={"purchase"} />
+        </div>
+        {/* 다른 상품 */}
+        <div className="other_people">
+          <OtherColumn type={"things"} />
+        </div>
+        {/* 연관 추천 상품 */}
+        <div className="other_people">
+          <OtherColumn type={"recommendation"} />
+        </div>
+        {/* 전세계 핫딜 로켓직구 글로벌특가 */}
+        <div className="pruduct_how">
+          <ProductColumn type={"special"} />
+        </div>
+        {/* 고르고 골랐어요 */}
+        <div className="tooChoose">
+          <TooChoose />
+        </div>
+        {/* 이 상품과 관련된 카테고리 */}
+        <div>
+          <ProductCategtoy />
+        </div>
       </div>
     </>
   );

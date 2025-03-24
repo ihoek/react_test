@@ -13,6 +13,10 @@ import { Tabs, ConfigProvider } from "antd";
 const Category = (props) => {
   //props
 
+  //useState
+  const [titleSize, setTitleSize] = useState(16); //상품 헤더 폰크 사이즈
+  const [titlePadding, setTitlePadding] = useState("10px 120px");
+
   //해당 탭을 누를 시 이동할 탭 리스트
   const items = [
     {
@@ -37,6 +41,33 @@ const Category = (props) => {
     },
   ];
 
+  //반응형
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 750) {
+        setTitleSize(10);
+        setTitlePadding("8px 80px");
+      } else if (window.innerWidth <= 1024) {
+        setTitleSize(14);
+        setTitlePadding("8px 100px");
+      } else {
+        setTitleSize(16);
+        setTitlePadding("10px 120px");
+      }
+    };
+
+    // 초기 로드 시 크기 설정
+    handleResize();
+
+    // 이벤트 리스너 추가
+    window.addEventListener("resize", handleResize);
+
+    // cleanup (이벤트 리스너 제거)
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div className="category">
@@ -48,10 +79,10 @@ const Category = (props) => {
               Tabs: {
                 itemSelectedColor: "#000",
                 itemHoverColor: "#000",
-                titleFontSize: 16,
+                titleFontSize: { titleSize },
                 inkBarColor: "none",
                 cardGutter: 4,
-                cardPadding: "10px 120px",
+                cardPadding: { titlePadding },
               },
             },
           }}
