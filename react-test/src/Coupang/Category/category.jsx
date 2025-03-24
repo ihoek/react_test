@@ -44,7 +44,9 @@ const Category = (props) => {
   //반응형
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 750) {
+      if (window.innerWidth <= 426) {
+        setTitleSize(8);
+      } else if (window.innerWidth <= 750) {
         setTitleSize(10);
         setTitlePadding("8px 80px");
       } else if (window.innerWidth <= 1024) {

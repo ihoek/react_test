@@ -1,7 +1,7 @@
 .coupang_wrap {
   max-width: 1280px;
   width: 100%;
-  height: 4000px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,6 +227,10 @@
         font-weight: bold;
         text-align: center;
       }
+      .option_btns {
+        display: flex;
+        gap: 5px;
+      }
       .option_btn {
         display: block;
         line-height: 40px;
@@ -432,7 +436,7 @@
   .coupang_wrap {
     max-width: 1280px;
     width: 100%;
-    height: 4000px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -526,6 +530,114 @@
     .arrive,
     .delivery_text {
       font-size: 10px;
+    }
+  }
+}
+
+/* 모바일 */
+@media (max-width: 426px) {
+  .coupang_wrap {
+    max-width: 1280px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+    .scroll__container {
+      display: none;
+    }
+
+    .main_top {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+      height: 1200px;
+    }
+
+    .main_top_img {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    .main_right {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+
+      .container_option {
+        .option_input {
+          height: 40px;
+          width: 95%;
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .option_btns {
+          display: flex;
+          z-index: 1000;
+          gap: 5px;
+          justify-content: center;
+          width: 100%;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          background-color: white; /* 배경색 추가 */
+          padding: 10px 0;
+          flex-direction: row;
+          align-items: center;
+        }
+        .option_btn {
+          display: block;
+          line-height: 40px;
+          width: 150px;
+          height: 40px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 16px;
+          border: 1px solid #346aff;
+          border-radius: 0px;
+          max-width: 150px;
+        }
+      }
+    }
+
+    .main_sub {
+      width: 100%;
+      height: 450px;
+      margin-top: 0px;
+
+      .sub_swiper {
+        width: 100%;
+        display: flex;
+        margin: 0px auto;
+      }
+
+      .sub_title {
+        color: #111;
+        line-height: 29px;
+        font-family: Malgun Gothic;
+        font-style: normal;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .special_price {
+        color: #cb1400;
+        font-family: Malgun Gothic;
+        font-style: normal;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 29px;
+      }
     }
   }
 }

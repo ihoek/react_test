@@ -67,3 +67,16 @@
     vertical-align: middle;
   }
 }
+@media (max-width: 426px) {
+  .how_products {
+    display: flex;
+
+    .subelements {
+      width: 90px;
+    }
+    .sub_img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+}

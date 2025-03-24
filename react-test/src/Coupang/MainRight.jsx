@@ -117,12 +117,18 @@ const MainRight = (props) => {
             onChange={onChange}
             controls={true}
           />
-          <Button onClick={alertcontent} className="option_btn">
-            장바구니 담기
-          </Button>
-          <Button onClick={alertcontent} className="option_btn" type="primary">
-            바로구매
-          </Button>
+          <div className="option_btns">
+            <Button onClick={alertcontent} className="option_btn">
+              장바구니 담기
+            </Button>
+            <Button
+              onClick={alertcontent}
+              className="option_btn"
+              type="primary"
+            >
+              바로구매
+            </Button>
+          </div>
         </div>
 
         {/* choose - color */}
