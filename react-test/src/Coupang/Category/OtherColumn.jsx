@@ -26,7 +26,7 @@ const OtherColumn = (props) => {
 
   //useState
   const [mainTitle, setMainTitle] = useState("");
-  //const [datalst, setDataLst] = useState("");
+  const [sliderStlyeSize, setSliderStyleSize] = useState(5);
 
   useEffect(() => {
     if (type === "other") {
@@ -41,6 +41,30 @@ const OtherColumn = (props) => {
     }
   }, []);
 
+  //반응형
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 750) {
+        setSliderStyleSize(3);
+      } else if (window.innerWidth <= 1024) {
+        setSliderStyleSize(4);
+      } else {
+        setSliderStyleSize(5);
+      }
+    };
+
+    // 초기 로드 시 크기 설정
+    handleResize();
+
+    // 이벤트 리스너 추가
+    window.addEventListener("resize", handleResize);
+
+    // cleanup (이벤트 리스너 제거)
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div className="main_title_div">
@@ -50,7 +74,7 @@ const OtherColumn = (props) => {
       <div className="other_products">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          slidesPerView={5}
+          slidesPerView={sliderStlyeSize}
         >
           {other_product.map((element) => (
             <SwiperSlide key={element.id}>

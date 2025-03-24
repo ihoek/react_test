@@ -27,7 +27,7 @@ const Review = (props) => {
   const onChange = (current, pageSize) => {
     setPagination(current);
     setPaginationSize(pageSize);
-    console.log(current, pageSize);
+    //console.log(current, pageSize);
   };
 
   return (
@@ -75,12 +75,14 @@ const Review = (props) => {
               pagination={pagination}
               paginationsize={paginationsize}
             />
-            <Pagination
-              onChange={onChange}
-              defaultCurrent={1}
-              defaultPageSize={5}
-              total={50}
-            />
+            <div className="pagination">
+              <Pagination
+                onChange={onChange}
+                defaultCurrent={1}
+                defaultPageSize={5}
+                total={photo_lst.length}
+              />
+            </div>
           </div>
         </div>
         {/* 4점 이상 리뷰가 좋은 상품 */}

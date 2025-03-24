@@ -26,6 +26,7 @@ const ProductColumn = (props) => {
 
   //useState
   const [mainTitle, setMainTitle] = useState("");
+  const [sliderStlyeSize, setSliderStyleSize] = useState(5);
 
   useEffect(() => {
     if (type === "how") {
@@ -37,6 +38,30 @@ const ProductColumn = (props) => {
     }
   }, []);
 
+  //반응형
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 750) {
+        setSliderStyleSize(4);
+      } else if (window.innerWidth <= 1024) {
+        setSliderStyleSize(6);
+      } else {
+        setSliderStyleSize(8);
+      }
+    };
+
+    // 초기 로드 시 크기 설정
+    handleResize();
+
+    // 이벤트 리스너 추가
+    window.addEventListener("resize", handleResize);
+
+    // cleanup (이벤트 리스너 제거)
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div className="main_title_div">
@@ -46,7 +71,7 @@ const ProductColumn = (props) => {
       <div className="how_products">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          slidesPerView={9}
+          slidesPerView={sliderStlyeSize}
         >
           {how_product.map((element) => (
             <SwiperSlide key={element.id}>

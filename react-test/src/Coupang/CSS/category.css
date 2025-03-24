@@ -535,6 +535,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 750px) {
   .ant-tabs-tab {
     justify-content: center;
