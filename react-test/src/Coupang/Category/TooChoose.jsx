@@ -54,7 +54,7 @@ const TooChoose = (props) => {
                       components: {
                         // component token
                         Rate: {
-                          starSize: 30,
+                          starSize: 25,
                         },
                       },
                     }}

@@ -87,14 +87,14 @@ const ReviewTitle = (props) => {
           <span className="latest"> 최신순</span>
         </div>
         <div className="serach_container">
-          <span>
+          <span className="search_div">
             <input
               type="text"
               className="search"
               placeholder="상품평을 검색해보세요."
             />
           </span>
-          <span className="dropdown_div">
+          <div className="dropdown_div">
             <Dropdown
               menu={{
                 items,
@@ -102,14 +102,14 @@ const ReviewTitle = (props) => {
             >
               <a onClick={(e) => e.preventDefault()}>
                 <div className="dropdown">
-                  <span>모든 별점 보기</span>
-                  <span>
+                  <div className="dropdowntext">모든 별점 보기</div>
+                  <div>
                     14,998 <DownOutlined />
-                  </span>
+                  </div>
                 </div>
               </a>
             </Dropdown>
-          </span>
+          </div>
         </div>
       </div>
     </>
